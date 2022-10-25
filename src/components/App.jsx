@@ -14,31 +14,6 @@ export class App extends Component {
     return this.state.good + this.state.neutral + this.state.bad;
   };
 
-  countPositiveFeedbackPercentage = () => {
-    let percentage = Math.floor(
-      ((this.state.good / this.countTotalFeedback()) * 100).toFixed(0)
-    );
-    if (isNaN(percentage)) {
-      return 0;
-    } else return percentage;
-  };
-
-  fooOnLeaveFeedback = feedbackOpt => {
-    switch (feedbackOpt) {
-      case 'good':
-        this.setState(state => ({ good: state.good + 1 }));
-        break;
-      case 'neutral':
-        this.setState(state => ({ neutral: state.neutral + 1 }));
-        break;
-      case 'bad':
-        this.setState(state => ({ bad: state.bad + 1 }));
-        break;
-      default:
-        return 0;
-    }
-  };
-
   render() {
     const { good, neutral, bad } = this.state;
     return (

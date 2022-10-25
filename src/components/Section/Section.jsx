@@ -3,7 +3,7 @@ import styles from './Section.module.css';
 
 export const Section = ({ title, children }) => (
   <div className={styles.container}>
-    <h2 className={styles.headerSecond}>{title}</h2>
+    <h2 className={styles.headSecond}>{title}</h2>
     {children}
   </div>
 );
